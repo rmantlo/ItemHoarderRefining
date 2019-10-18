@@ -1,0 +1,166 @@
+﻿@model ItemHoarder.Models.Characteristics.Features.FeatureDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FeatureDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FeatureID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeatureID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FeatureName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeatureName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Benefits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Benefits)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Special)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Special)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RacePointCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RacePointCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LvlPrerequisite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LvlPrerequisite)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StatPrerequisite)
+        </dt>
+        @foreach (var item in Model.StatPrerequisite)
+        {
+            <dd>
+                @item.Key @item.Value
+            </dd>
+        }
+        <dt>
+            @Html.DisplayNameFor(model => model.RaceIdPrerequisite)
+        </dt>
+        @foreach (var item in Model.RaceIdPrerequisite)
+        {
+            <dd>
+                @item.Value
+            </dd>
+        }
+        <dt>
+            @Html.DisplayNameFor(model => model.FeatureIdPrerequisite)
+        </dt>
+        @foreach (var item in Model.FeatureIdPrerequisite)
+        {
+            <dd>
+                @item.Value
+            </dd>
+        }
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StrengthModifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StrengthModifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DexterityModifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DexterityModifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConstitutionModifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConstitutionModifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IntelligenceModifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IntelligenceModifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WisdomModifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WisdomModifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CharismaModifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CharismaModifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfCreation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfCreation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfModification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfModification)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FeatureID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

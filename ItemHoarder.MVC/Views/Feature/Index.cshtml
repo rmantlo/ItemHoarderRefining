@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ItemHoarder.Models.Characteristics.Features.FeatureIndex>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.FeatureID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerID)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.FeatureName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RacePointCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfCreation)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.DateOfModification)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.FeatureID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerID)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.FeatureName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RacePointCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfCreation)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.DateOfModification)
+        </td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.FeatureID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.FeatureID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.FeatureID })
+        </td>
+    </tr>
+}
+
+</table>

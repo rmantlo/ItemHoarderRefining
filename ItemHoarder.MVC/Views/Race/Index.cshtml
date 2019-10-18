@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ItemHoarder.Models.Characteristics.Race.RaceIndex>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RaceName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GameType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhysicalDescription)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RaceName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhysicalDescription)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.RaceID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.RaceID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.RaceID })
+            </td>
+        </tr>
+    }
+
+</table>

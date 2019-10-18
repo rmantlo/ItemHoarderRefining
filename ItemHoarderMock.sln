@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemHoarderMock.API", "ItemHoarderMock.API\ItemHoarderMock.API.csproj", "{0D780337-9F5E-449B-A10B-03EB1F7834B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemHoarder.Data", "ItemHoarder.Data\ItemHoarder.Data.csproj", "{E74B2E1F-6074-47E7-83D6-8D904B0DB1E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemHoarder.Services", "ItemHoarder.Services\ItemHoarder.Services.csproj", "{83BF80EC-0FFE-424E-991A-B055A363DA5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemHoarder.Models", "ItemHoarder.Models\ItemHoarder.Models.csproj", "{891E0BF7-92A1-4511-BF0C-9058F32423DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemHoarder.Tests", "ItemHoarder.Tests\ItemHoarder.Tests.csproj", "{80FE073F-4468-49FC-A467-CF0C4BDADEF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemHoarder.MVC", "ItemHoarder.MVC\ItemHoarder.MVC.csproj", "{7C14EEC0-0EE2-4162-9D75-6F95E982A859}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D780337-9F5E-449B-A10B-03EB1F7834B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D780337-9F5E-449B-A10B-03EB1F7834B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D780337-9F5E-449B-A10B-03EB1F7834B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D780337-9F5E-449B-A10B-03EB1F7834B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E74B2E1F-6074-47E7-83D6-8D904B0DB1E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E74B2E1F-6074-47E7-83D6-8D904B0DB1E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E74B2E1F-6074-47E7-83D6-8D904B0DB1E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E74B2E1F-6074-47E7-83D6-8D904B0DB1E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83BF80EC-0FFE-424E-991A-B055A363DA5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83BF80EC-0FFE-424E-991A-B055A363DA5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83BF80EC-0FFE-424E-991A-B055A363DA5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83BF80EC-0FFE-424E-991A-B055A363DA5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{891E0BF7-92A1-4511-BF0C-9058F32423DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{891E0BF7-92A1-4511-BF0C-9058F32423DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{891E0BF7-92A1-4511-BF0C-9058F32423DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{891E0BF7-92A1-4511-BF0C-9058F32423DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80FE073F-4468-49FC-A467-CF0C4BDADEF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80FE073F-4468-49FC-A467-CF0C4BDADEF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80FE073F-4468-49FC-A467-CF0C4BDADEF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80FE073F-4468-49FC-A467-CF0C4BDADEF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C14EEC0-0EE2-4162-9D75-6F95E982A859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C14EEC0-0EE2-4162-9D75-6F95E982A859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C14EEC0-0EE2-4162-9D75-6F95E982A859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C14EEC0-0EE2-4162-9D75-6F95E982A859}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59867A71-EC06-4488-AED8-2D7DC12BCB90}
+	EndGlobalSection
+EndGlobal
