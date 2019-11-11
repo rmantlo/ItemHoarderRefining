@@ -1,0 +1,92 @@
+﻿@model IEnumerable<ItemHoarder.Models.Items.ItemIndex>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            
+        </th>
+        <th>Item Type</th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CostPlatinum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CostGold)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CostSilver)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CostElectrum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CostCopper)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @if (item.ItemPhoto != null)
+            {
+                <img class="profileImg" src="data:image/jpg;base64,@Convert.ToBase64String(item.ItemPhoto.Content)" />
+            }
+            else
+            {
+                <p>No Pic</p>
+            }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CostPlatinum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CostGold)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CostSilver)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CostElectrum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CostCopper)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfCreation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfModification)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ItemID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ItemID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ItemID })
+        </td>
+    </tr>
+}
+
+</table>

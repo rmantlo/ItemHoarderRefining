@@ -171,6 +171,7 @@
     <Compile Include="Controllers\Characteristics\FeatureController.cs" />
     <Compile Include="Controllers\Characteristics\RaceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Global.asax.cs">
@@ -242,6 +243,16 @@
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Feature\Index.cshtml" />
     <Content Include="Views\Feature\Details.cshtml" />
+    <Content Include="Views\Item\Index.cshtml" />
+    <Content Include="Views\Item\Create.cshtml" />
+    <Content Include="Views\Item\Partials\_WeaponCreate.cshtml" />
+    <Content Include="Views\Item\Partials\_ArmorCreate.cshtml" />
+    <Content Include="Views\Item\Partials\_ItemCreate.cshtml" />
+    <Content Include="Views\Item\Details.cshtml" />
+    <Content Include="Views\Item\Edit.cshtml" />
+    <Content Include="Views\Item\Partials\_ItemEdit.cshtml" />
+    <Content Include="Views\Item\Partials\_ArmorEdit.cshtml" />
+    <Content Include="Views\Item\Partials\_WeaponEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,25 @@
+﻿@model ItemHoarder.Models.Items.ItemDetails
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@if (Model.GetType() == typeof(ItemHoarder.Models.Items.OtherItemDetails))
+{
+    @Html.Partial("Partials/_ItemEdit", Model)
+}
+else if (Model.GetType() == typeof(ItemHoarder.Models.Items.ArmorDetails))
+{
+    @Html.Partial("Partials/_ArmorEdit")
+}
+else if (Model.GetType() == typeof(ItemHoarder.Models.Items.WeaponDetails))
+{
+    @Html.Partial("Partials/_WeaponEdit")
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

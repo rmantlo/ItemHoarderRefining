@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace ItemHoarder.MVC.Controllers
 {
+    [Authorize]
     public class ProfileController : Controller
     {
         // GET: Profile
@@ -27,6 +28,7 @@ namespace ItemHoarder.MVC.Controllers
             return View(new ProfileUpdate
             {
                 UserID = info.UserID,
+                Photo = (info.ProfileImage != null)?info.ProfileImage.Content: null,
                 About = info.About
             });
         }
@@ -44,7 +46,7 @@ namespace ItemHoarder.MVC.Controllers
             if (service.UpdateProfileInfo(update))
             {
                 TempData["SaveResult"] = "Your Profile was updated";
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index");
             }
             return View(update);
         }

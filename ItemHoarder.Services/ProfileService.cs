@@ -26,14 +26,14 @@ namespace ItemHoarder.Services
                 {
                     UserID = profile.UserID,
                     Username = profile.Username,
-                    ProfileImage = (profile.Photo != null) ? new PhotoDisplay
+                    ProfileImage = (profile.Photo.Count > 0) ? new PhotoDisplay
                     {
                         PhotoID = profile.Photo.First().PhotoID,
                         PhotoName = profile.Photo.First().PhotoName,
                         FileType = profile.Photo.First().FileType,
                         ContentType = profile.Photo.First().ContentType,
                         Content = profile.Photo.First().Content
-                    } : new PhotoDisplay(),
+                    } : null,
                     About = profile.About,
                     DateOfCreation = profile.DateOfCreation,
                     DateOfModification = profile.DateOfModification
@@ -107,7 +107,7 @@ namespace ItemHoarder.Services
                         {
                             photo.Content = reader.ReadBytes(profile.PhotoUpload.ContentLength);
                         }
-                        if (oldProfile.Photo != null)
+                        if (oldProfile.Photo.Count > 0)
                         {
                             oldProfile.Photo.Clear();
                         }
@@ -115,7 +115,12 @@ namespace ItemHoarder.Services
                     }
                     oldProfile.About = profile.About;
                     oldProfile.DateOfModification = DateTimeOffset.UtcNow;
-                    return ctx.SaveChanges() == 4;
+                    var save = ctx.SaveChanges();
+                    if (save == 3 || save == 4)
+                    {
+                        return true;
+                    }
+                    else return false;
                 }
                 else return false;
             }

@@ -76,8 +76,12 @@
     <Compile Include="Characteristics\Features\FFeatPrerequisites.cs" />
     <Compile Include="Characteristics\Features\FRacePrerequisites.cs" />
     <Compile Include="Characteristics\Features\Feature.cs" />
+    <Compile Include="Characteristics\Proficiencies\Proficiency.cs" />
     <Compile Include="Characteristics\Races\RaceFeatures.cs" />
     <Compile Include="Characteristics\Races\Race.cs" />
+    <Compile Include="EnumList.cs" />
+    <Compile Include="Items\InventoryItems.cs" />
+    <Compile Include="Items\Item.cs" />
     <Compile Include="Photo.cs" />
     <Compile Include="Profile.cs" />
     <Compile Include="IdentityModels.cs" />

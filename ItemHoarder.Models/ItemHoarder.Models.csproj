@@ -79,6 +79,10 @@
     <Compile Include="Characteristics\Race\RaceCreate.cs" />
     <Compile Include="Characteristics\Race\RaceDetails.cs" />
     <Compile Include="Characteristics\Race\RaceIndex.cs" />
+    <Compile Include="Items\ItemCreate.cs" />
+    <Compile Include="Items\ItemDetails.cs" />
+    <Compile Include="Items\ItemEdit.cs" />
+    <Compile Include="Items\ItemIndex.cs" />
     <Compile Include="PhotoDisplay.cs" />
     <Compile Include="Profile\ProfileUpdate.cs" />
     <Compile Include="Profile\ProfileInfo.cs" />

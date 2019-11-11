@@ -9,10 +9,15 @@
 {
     @Html.AntiForgeryToken()
     @Html.HiddenFor(model => model.UserID)
+    //@Html.HiddenFor(model => model.Photo)
 
     <div class="form-horizontal">
-        <h4>NoteCreate</h4>
+        <h4>ProfileCreate</h4>
         <hr />
+        @if (Model.Photo != null)
+        {
+            <img class="profileImg" src="data:image/jpg;base64,@Convert.ToBase64String(Model.Photo)" />
+        }
         @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })*@
         <div class="form-group">
             @Html.LabelFor(model => model.PhotoUpload, htmlAttributes: new { @class = "control-label col-md-2" })

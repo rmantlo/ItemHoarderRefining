@@ -1,0 +1,51 @@
+﻿@model ItemHoarder.Models.Items.ItemCreate
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@Html.DropDownList("ItemType", new SelectList(new List<string> { "item", "weapon", "armor" }), null, new { @class = "form-control" })
+
+
+<div class="item" style="display:block">
+    @Html.Partial("Partials/_ItemCreate")
+</div>
+<div class="weapon" style="display:none">
+    @Html.Partial("Partials/_WeaponCreate")
+</div>
+<div class="armor" style="display:none">
+    @Html.Partial("Partials/_ArmorCreate")
+</div>
+
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#ItemType').change(function (event) {
+                var va = $(event.target).val();
+                console.log(va);
+                if (va === "item") {
+                    $('.item').css('display', 'block');
+                    $('.weapon').css('display', 'none');
+                    $('.armor').css('display', 'none');
+                }
+                else if (va === "weapon") {
+                    $('.item').css('display', 'none');
+                    $('.weapon').css('display', 'block');
+                    $('.armor').css('display', 'none');
+                }
+                else if (va === "armor") {
+                    $('.item').css('display', 'none');
+                    $('.weapon').css('display', 'none');
+                    $('.armor').css('display', 'block');
+                }
+            })
+        })
+    </script>
+}

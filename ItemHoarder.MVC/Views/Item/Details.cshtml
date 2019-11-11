@@ -1,0 +1,152 @@
+﻿@model ItemHoarder.Models.Items.ItemDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ItemDetails</h4>
+    <hr />
+    @if (Model.ItemPhoto != null)
+    {
+        <img class="profileImg" src="data:image/jpg;base64,@Convert.ToBase64String(Model.ItemPhoto.Content)" />
+    }
+    else
+    {
+        <p>No Pic</p>
+    }
+    <div style="display:flex; flex-wrap:wrap;">
+        <dl class="dl-horizontal">
+            <dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ItemName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ItemName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                Cost:
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CostPlatinum)P, @Html.DisplayFor(model => model.CostGold)G, @Html.DisplayFor(model => model.CostElectrum) E, @Html.DisplayFor(model => model.CostSilver)S, @Html.DisplayFor(model => model.CostCopper)C
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Strength)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Strength)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Dexterity)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Dexterity)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Constitution)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Constitution)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Intelligence)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Intelligence)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Wisdom)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Wisdom)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Charisma)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Charisma)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfCreation)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateOfCreation)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfModification)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateOfModification)
+            </dd>
+
+        </dl>
+        <dl class="dl-horizontal">
+            @if (Model.GetType() == typeof(ItemHoarder.Models.Items.OtherItemDetails))
+            {
+                var item = (ItemHoarder.Models.Items.OtherItemDetails)Model;
+                <dt>
+                    @Html.DisplayNameFor(model => item.ItemClass)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => item.ItemClass)
+                </dd>
+
+            }
+            else if (Model.GetType() == typeof(ItemHoarder.Models.Items.ArmorDetails))
+            {
+                var item = (ItemHoarder.Models.Items.ArmorDetails)Model;
+
+                <dt>
+                    @Html.DisplayNameFor(model => item.ArmorType)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => item.ArmorType)
+                </dd>
+            }
+            else if (Model.GetType() == typeof(ItemHoarder.Models.Items.WeaponDetails))
+            {
+                var item = (ItemHoarder.Models.Items.WeaponDetails)Model;
+
+                <dt>
+                    @Html.DisplayNameFor(model => item.WeaponType)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => item.WeaponType)
+                </dd>
+            }
+        </dl>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ItemID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

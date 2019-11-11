@@ -10,6 +10,7 @@ namespace ItemHoarder.Models.Profile
     public class ProfileUpdate
     {
         public Guid UserID { get; set; }
+        public byte[] Photo { get; set; }
         public HttpPostedFileBase PhotoUpload { get; set; }
         public string About { get; set; }
     }

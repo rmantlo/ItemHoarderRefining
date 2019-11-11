@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace ItemHoarder.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class RaceTests
     {
         [TestMethod]
         public void RaceAndPolymorphism()
@@ -40,5 +40,7 @@ namespace ItemHoarder.Tests
             //service.GetAllMyRaces();
             service.CreateRace(something);
         }
+
+        
     }
 }

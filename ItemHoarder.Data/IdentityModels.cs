@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using ItemHoarder.Data.Characteristics.Features;
 using ItemHoarder.Data.Characteristics.Races;
+using ItemHoarder.Data.Items;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -37,6 +38,10 @@ namespace ItemHoarder.Data
         }
         public DbSet<Profile> UserProfile { get; set; }
         public DbSet<Photo> Photos { get; set; }
+
+        public DbSet<Item> Items { get; set; }
+        public DbSet<InventoryItems> Inventory { get; set; }
+
         public DbSet<Feature> Features { get; set; }
         public DbSet<FRacePrerequisites> FeatureRacePrereq { get; set; }
         public DbSet<FFeatPrerequisites> FeatureFeatPrereq { get; set; }
